@@ -1,0 +1,25 @@
+lib.veranstaltungstitel = RECORDS
+lib.veranstaltungstitel {
+	wrap =|
+	source.data = GP:tx_cal_controller|uid
+	tables = tx_cal_event
+	conf.tx_cal_event = TEXT
+	conf.tx_cal_event.field = title
+}
+
+lib.veranstaltungstermin = RECORDS
+lib.veranstaltungstermin {
+	wrap =|
+	source.data = GP:tx_cal_controller|uid
+	tables = tx_cal_event
+	conf.tx_cal_event = TEXT
+	conf.tx_cal_event.field = tx_am_teaserdate
+}
+lib.veranstaltungsuhrzeit = RECORDS
+lib.veranstaltungsuhrzeit {
+	wrap =|
+	source.data = GP:tx_cal_controller|uid
+	tables = tx_cal_event
+	conf.tx_cal_event = TEXT
+	conf.tx_cal_event.field = tx_am_time
+}

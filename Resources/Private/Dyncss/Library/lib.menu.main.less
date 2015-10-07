@@ -1,0 +1,331 @@
+/* ===== Navbar ===== */
+
+.navbar-static-top {
+  right: 0;
+  left: 0;
+}
+
+/* Navbar gets a bit higher */
+
+.navbar {
+  min-height: 75px;
+  margin-bottom: 0 !important;
+  > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 27.5px;
+        padding-bottom: 27.5px;
+    }
+}
+.navbar-form {
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
+}
+.navbar-brand {
+  padding: 25px 15px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+
+  > span {
+    font-size: 14px;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.navbar-btn {
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
+}
+.navbar-text {
+  margin-top: 27.5px;
+  margin-bottom: 27.5px;
+}
+.navbar-toggle {
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
+}
+
+/* Navbar Dark */
+
+.navbar-dark {
+  background-color: @tibethaus-red-dark;
+  border: 0;
+  .navbar-brand {
+    color: #ecf0f1;
+    text-shadow: 1px 1px 2px #333;
+    > span {
+      color: #ccc;
+    }
+    &:hover, &:focus {
+      color: #fff;
+    }
+  }
+  .navbar-text {
+    color: #ecf0f1;
+  }
+  .navbar-link {
+    color: #ecf0f1;
+    &:hover {
+      color: #FFF;
+    }
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        color: #ecf0f1;
+        /*background: @tibethaus-red;*/
+        -webkit-transition: background 500ms;
+        transition: background 500ms;
+      }
+    }
+    > .active {
+      > a, a:hover, a:focus {
+        color: #FFF;
+        background-color: @tibethaus-white-transparent;
+      }
+    }
+    > .disabled {
+      > a, a:hover, a:focus {
+        color: #bdc3c7;
+      }
+    }
+    > .open {
+      > a, a:focus, a:hover {
+        color: #FFF;
+        background-color: @tibethaus-white-transparent;
+    	border-color: #ff8700;
+
+        .caret {
+          border-top-color: #FFF;
+          border-bottom-color: #FFF;
+        }
+      }
+      > a:after {
+        color: @tibethaus-red-dark;
+      }
+    }
+    > .dropdown {
+      > a {
+        border-top-color: #ecf0f1;
+        border-bottom-color: #ecf0f1;
+
+        &:hover {
+          .caret {
+            border-top-color: #FFF;
+            border-bottom-color: #FFF;
+          }
+        }
+      }
+
+    }
+  }
+  .navbar-toggle {
+    border-color: transparent;
+    background: transparent;
+    &:hover, &:focus {
+      background-color: @tibethaus-red-dark;
+
+      .icon-bar {
+        background-color: #fff;
+      }
+    }
+    .icon-bar {
+      background-color: #ecf0f1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+    .navbar-dark {
+        /* ===== Navbar top colors =====*/
+        /* Buddhismus */
+        &.color-21 {
+            background-color: #93162c;
+        }
+        /* Gesellschaft */
+        &.color-22 {
+            background-color: #637b73;
+        }
+        /* Kultur */
+        &.color-23 {
+            /*background-color: #ac6b32;*/
+            background-color: #d26c22;
+        }
+        /* Heilkunde */
+        &.color-24 {
+            background-color: #555d8a;
+        }
+        /* Wissenschaft */
+        &.color-25 {
+            background-color: #83746a;
+        }
+    }
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: @tibethaus-white-transparent;
+    text-decoration: none;
+}
+
+
+/* .navbar-dark .navbar-nav > li > a:hover,
+.navbar-dark .navbar-nav > li > a:focus {
+  color: #FFF;
+} */
+
+.navbar-nav > .open > a:after {
+  content: "\f0d8";
+  font-family: FontAwesome;
+  position: absolute;
+  z-index: 9999;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -10px;
+  font-size: 36px;
+}
+
+.navbar-white {
+  .navbar-nav {
+    > .open {
+      > a:after {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Navbar Dark Dropdown Menu */
+
+.navbar-dark {
+    .navbar-nav {
+        > li {
+            > .dropdown-menu {
+                background-color: @tibethaus-red-dark;
+                border: 1px solid @tibethaus-red-dark;
+                border-top: 1px solid #666;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                > li {
+                    > a {
+                        padding: 7px 20px;
+                        border-bottom: 1px solid #666;
+                        color: #fff;
+
+                        &:hover, &:focus {
+                            color: #fff;
+                            -webkit-transition: all 0.1s ease-in-out;
+                            transition: all 0.1s ease-in-out;
+                        }
+                    }
+
+                    &:last-child {
+                        > a {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Navbar Dark Mobile */
+
+@media (max-width: 767px) {
+  .navbar-dark {
+    .navbar-nav {
+      .open {
+        .dropdown-menu {
+          > .dropdown-header {
+            border-color: @tibethaus-red-dark;
+          }
+          > li {
+            > a {
+              color: #ecf0f1;
+              padding: 10px 20px;
+              border: 0;
+              &:hover, &:focus {
+                color: #fff;
+              }
+            }
+          }
+          > .active {
+            a {
+              &, &:hover, &:focus {
+                color: #fff;
+              }
+            }
+          }
+          > .disabled {
+            a {
+              &, &:hover, &:focus {
+                color: #bdc3c7;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+        > a {
+          &, &:hover, &:focus {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-width: 0;
+          }
+        }
+      }
+    }
+    > li {
+      a {
+        &, &:hover, &:focus {
+          color: #FFF;
+        }
+      }
+    }
+      #navbar-main, .navbar-form {
+          border-color: @tibethaus-red;
+          background-color: @tibethaus-red-dark;
+      }
+      /* ===== Navbar top colors =====*/
+      /* Buddhismus */
+      .dropdown.uid-21 a, .uid-21 ul.dropdown-menu.sub {
+          background-color: #93162c;
+      }
+      .navbar-nav .uid-21 > a::after {
+          color: #93162c;
+      }
+      /* Gesellschaft */
+      .dropdown.uid-22 a, .uid-22 ul.dropdown-menu.sub {
+          background-color: #637b73;
+      }
+      .navbar-nav .uid-22 > a::after {
+          color: #637b73;
+      }
+      /* Kultur */
+      .dropdown.uid-23 a, .uid-23 ul.dropdown-menu.sub {
+          background-color: #ac6b32;
+      }
+      .navbar-nav .uid-23 > a::after {
+          color: #ac6b32;
+      }
+      /* Heilkunde */
+      .dropdown.uid-24 a, .uid-24 ul.dropdown-menu.sub {
+          background-color: #555d8a;
+      }
+      .navbar-nav .uid-24 > a::after {
+          color: #555d8a;
+      }
+      /* Wissenschaft */
+      .dropdown.uid-25 a, .uid-25 ul.dropdown-menu.sub {
+          background-color: #83746a;
+      }
+      .navbar-nav .uid-25 > a::after {
+          color: #83746a;
+      }
+  }
+}
+

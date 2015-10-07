@@ -1,0 +1,18 @@
+lib.menu.footer.top = HMENU
+lib.menu.footer.top.special = directory
+lib.menu.footer.top.special.value = {$themes.configuration.menu.footer.top.containerPid}
+lib.menu.footer.top.includeNotInMenu = {$themes.configuration.menu.footer.top.includeNotInMenu}
+lib.menu.footer.top.excludeUidList = {$themes.configuration.menu.footer.top.excludeUidList}
+lib.menu.footer.top.wrap >
+lib.menu.footer.top.stdWrap.wrap = <ul class="{$themes.configuration.menu.footer.top.cssClasses}"> | </ul>
+lib.menu.footer.top.stdWrap.required = 1
+lib.menu.footer.top.1 = TMENU
+lib.menu.footer.top.1 {
+	expAll = 1
+	NO = 1
+	NO.wrapItemAndSub.insertData = 1
+	NO.wrapItemAndSub = <li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.footer.top.prefix}|</li>{$themes.configuration.menu.footer.top.divider}|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.footer.top.prefix}|</li>{$themes.configuration.menu.footer.top.divider}|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.footer.top.prefix}|</li>
+	ACT < .NO
+	ACT.wrapItemAndSub.insertData = 1
+	ACT.wrapItemAndSub = <li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.footer.top.prefix}|</li>{$themes.configuration.menu.footer.top.divider}|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.footer.top.prefix}|</li>{$themes.configuration.menu.footer.top.divider}|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.footer.top.prefix}|</li>
+}

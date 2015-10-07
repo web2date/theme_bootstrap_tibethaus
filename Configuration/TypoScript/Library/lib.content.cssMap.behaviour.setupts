@@ -1,0 +1,4 @@
+lib.content.cssMap.behaviour {
+		teaser = teaser
+		jumbotron = jumbotron
+}

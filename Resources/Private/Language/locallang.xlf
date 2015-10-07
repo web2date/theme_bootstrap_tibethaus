@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.0">
+	<file source-language="en"
+		datatype="plaintext"
+		original="messages"
+		date="2014-04-13T18:20:51Z"
+		product-name="theme_bootstrap_mosaic">
+		<header/>
+		<body>
+			<!-- Variants labels -->
+			<trans-unit id="content.variants.social" xml:space="preserve">
+				<source>Social Media Icons</source>
+			</trans-unit>
+
+			<trans-unit id="content.variants.alert_dismissable" xml:space="preserve">
+				<source>Alert dismissable</source>
+			</trans-unit>
+
+			<trans-unit id="content.variants.infoboard_green" xml:space="preserve">
+				<source>Green Infoboard</source>
+			</trans-unit>
+			<trans-unit id="content.variants.infoboard_blue" xml:space="preserve">
+				<source>Blue Infoboard</source>
+			</trans-unit>
+			<trans-unit id="content.variants.infoboard_orange" xml:space="preserve">
+				<source>Orange Infoboard</source>
+			</trans-unit>
+			<trans-unit id="content.variants.infoboard_red" xml:space="preserve">
+				<source>Red Infoboard</source>
+			</trans-unit>
+
+			<trans-unit id="content.variants.panel_green" xml:space="preserve">
+				<source>Panel Green</source>
+			</trans-unit>
+			<trans-unit id="content.variants.panel_blue" xml:space="preserve">
+				<source>Panel Blue</source>
+			</trans-unit>
+			<trans-unit id="content.variants.panel_orange" xml:space="preserve">
+				<source>Panel Orange</source>
+			</trans-unit>
+			<trans-unit id="content.variants.panel_red" xml:space="preserve">
+				<source>Panel Red</source>
+			</trans-unit>
+
+			<trans-unit id="content.variants.navigation_pills_green" xml:space="preserve">
+				<source>Green Pills</source>
+			</trans-unit>
+			<trans-unit id="content.variants.navigation_pills_blue" xml:space="preserve">
+				<source>Blue Pills</source>
+			</trans-unit>
+			<trans-unit id="content.variants.navigation_pills_red" xml:space="preserve">
+				<source>Red Pills</source>
+			</trans-unit>
+			<trans-unit id="content.variants.navigation_pills_orange" xml:space="preserve">
+				<source>Orange Pills</source>
+			</trans-unit>
+
+			<trans-unit id="content.buttons.green" xml:space="preserve">
+				<source>Green Button</source>
+			</trans-unit>
+			<trans-unit id="content.buttons.blue" xml:space="preserve">
+				<source>Blue Button</source>
+			</trans-unit>
+			<trans-unit id="content.buttons.red" xml:space="preserve">
+				<source>Red Button</source>
+			</trans-unit>
+			<trans-unit id="content.buttons.darkred" xml:space="preserve">
+        		<source>Darkred Button</source>
+        	</trans-unit>
+			<trans-unit id="content.buttons.orange" xml:space="preserve">
+				<source>Orange Button</source>
+			</trans-unit>
+			<trans-unit id="content.buttons.grey" xml:space="preserve">
+				<source>Grey Button</source>
+			</trans-unit>
+
+			<trans-unit id="content.behaviour.team_listing" xml:space="preserve">
+				<source>Team listing</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

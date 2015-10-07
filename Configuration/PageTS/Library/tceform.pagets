@@ -1,0 +1,39 @@
+## Layout Typen umbenennen
+TCEFORM.tt_content.header_layout.altLabels {
+    1 = H1
+    2 = H2
+    3 = H3
+	4 = H4
+	5 = H5
+}
+TCEFORM.tt_content.header_layout.addItems {
+    #6 = H1 Carousel Title
+    #7 = H2 Block Header Row
+}
+
+RTE {
+	default	 {
+		buttons {
+			link.properties.class {
+				allowedClasses := addToList(button-green,button-blue,button-orange,button-red,button-grey)
+			}
+		}
+	}
+	classes {
+		button-green {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.green
+		}
+		button-blue {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.blue
+		}
+		button-orange {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.orange
+		}
+		button-red {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.red
+		}
+		button-grey {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.grey
+		}
+	}
+}

@@ -1,0 +1,26 @@
+plugin.tx_cal_controller.pidList = 152
+
+plugin.tx_cal_controller.rights.edit = 1
+plugin.tx_cal_controller.rights.defaultSavePid = 152
+plugin.tx_cal_controller.rights.admin.group = 1,3
+
+plugin.tx_cal_controller.emailAddress = info@tibethaus.com
+plugin.tx_cal_controller.emailName = Tibethaus Team
+plugin.tx_cal_controller.emailOrganisation = Tibethaus Deutschland e.V.
+
+plugin.tx_cal_controller.view.timeFormat = %H:%M
+plugin.tx_cal_controller.view.dateFormat = %B %d
+#plugin.tx_cal_controller.view.imagePath = fileadmin/templates/tibethaus/extensions/cal/img
+#plugin.tx_cal_controller.view.imagePath = EXT:theme_bootstrap_tibethaus/Resources/Public/Extensions/Cal/Images
+plugin.tx_cal_controller.view.event.remind = 0
+
+plugin.tx_cal_controller.view.event.eventTemplate = fileadmin/templates/tibethaus/extensions/cal/standard_template/event.tmpl
+plugin.tx_cal_controller.view.event.deleteEventTemplate = fileadmin/templates/tibethaus/extensions/cal/standard_template/delete_event.tmpl
+plugin.tx_cal_controller.view.event.confirmEventTemplate = fileadmin/templates/tibethaus/extensions/cal/standard_template/confirm_event.tmpl
+plugin.tx_cal_controller.view.event.createEventTemplate = fileadmin/templates/tibethaus/extensions/cal/standard_template/create_event.tmpl
+plugin.tx_cal_controller.view.event.eventModelTemplate = fileadmin/templates/tibethaus/extensions/cal/standard_template/event_model.tmpl
+plugin.tx_cal_controller.view.month.monthTemplate = fileadmin/templates/tibethaus/extensions/cal/standard_template/month.tmpl
+
+### special sizes for tt_content textpic??? ###
+plugin.tx_cal_controller.singleMaxW = 480
+plugin.tx_cal_controller.listMaxW = 240

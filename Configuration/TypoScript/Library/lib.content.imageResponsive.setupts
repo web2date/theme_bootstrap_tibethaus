@@ -1,0 +1,44 @@
+/**
+ * Created by Andrea on 13.05.2015.
+ */
+# ================================================ tt_content Imagegrößen ============================================== #
+tt_content.image.20.1 {
+
+    layout {
+        tibethaus {
+            element (
+                <img src="typo3conf/ext/theme_bootstrap_tibethaus/Resources/Public/Images/blank.gif" ###PARAMS######SOURCECOLLECTION######ALTPARAMS######SELFCLOSINGTAGSLASH###>
+            <noscript>
+                <img class="img-responsive" src="###SRC###"###ALTPARAMS###/>
+            </noscript>
+        )
+            source = data-###DATAKEY###="###SRC###"
+            source.noTrimWrap = ; ;;
+            source.noTrimWrap.splitChar = ;
+        }
+    }
+
+    sourceCollection >
+    sourceCollection {
+        src {
+            dataKey = src
+        }
+        lg {
+            width = 1200
+            dataKey = lg
+        }
+        md {
+            width = 992
+            dataKey = md
+        }
+        sm {
+            width = 768
+            dataKey = sm
+        }
+        xs {
+            width = 480
+            dataKey = xs
+        }
+    }
+    params = class="lazy img-responsive"
+}

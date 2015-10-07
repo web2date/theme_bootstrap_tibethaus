@@ -1,0 +1,11 @@
+lib.header.special.logo = IMAGE
+lib.header.special.logo.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/tibeth_logo_schriftz_4c_pc.png
+lib.header.special.logo.params = class="img-responsive"
+lib.header.special.logo.stdWrap.typolink {
+    parameter = {$themes.configuration.pages.startsite}
+    parameter.insertData = 1
+    title = {$themes.configuration.siteName}
+    ATagParams = class="special-logo"
+}
+lib.header.special.logo.altText = {$logolink_alt}
+lib.header.special.logo.titleText = {$logolink_text}

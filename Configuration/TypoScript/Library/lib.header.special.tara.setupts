@@ -1,0 +1,5 @@
+lib.header.special.tara = IMAGE
+lib.header.special.tara.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/tara_green.gif
+lib.header.special.tara.params = class="img-responsive"
+lib.header.special.tara.altText = {$tara_alt}
+lib.header.special.tara.titleText = {$tara_text}

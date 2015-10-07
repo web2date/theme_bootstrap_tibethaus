@@ -1,0 +1,26 @@
+themes {
+	content {
+		# Behaviour for content elements
+		behaviour {
+			gridelements_pi1 {
+				
+				default {
+					navigation-pills = Pills navigation
+					navigation-tabs = Tabs navigation
+                    teaser = Teaser
+                    jumbotron = Jumbotron
+				}
+				accordion {
+					accordion-first-open = Open first accordion panel
+				}
+				row{
+
+				}
+				tabs {
+					
+				}
+				
+			}
+		}
+	}
+}

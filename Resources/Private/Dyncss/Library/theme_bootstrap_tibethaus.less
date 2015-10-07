@@ -1,0 +1,90 @@
+/* ===== Variables =====*/
+@body-font-family: 'Roboto', sans-serif;
+@body-color: #505050;
+@headings-font-family: 'Oswald', sans-serif;
+
+/* ===== General ===== */
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: @body-font-family;
+  color: @body-color;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px !important;
+  }
+}
+
+/* ===== Typography ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: @headings-font-family;
+}
+
+.divider hr {
+    clear: both;
+    border-bottom: 1px solid #cccccc;
+    margin: 20px 0;
+}
+.csc-frame-rulerBefore {
+    border-top: 1px solid #cccccc;
+    padding: 15px 0 0;
+}
+/* ===== global styles ===== */
+.inline-block {
+  display:inline-block;
+}
+
+div.csc-textpic{
+    .csc-textpic-imagewrap img {
+        width: 100%;
+    }
+    .csc-textpic-text {
+        padding-top: 10px;
+    }
+    .csc-textpic-caption{
+        font-style: italic;
+    }
+}
+.carousel-inner {
+    .csc-textpic-text {
+        /*padding-top: 0px!important;*/
+    }
+}
+/* wt_cart tt_news */
+div.news-single-item div.tt_news_single_top form fieldset input[type="submit"] {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #808080 0%, #707070 50%, #777777 51%, #999999 100%) repeat scroll 0 0!important;
+    font-weight: normal!important;
+}
+/* button styling home */
+#c4470.csc-default{
+  a.btn {
+    width: 150px;
+  }
+}
+
+/* Slick Slider */
+.slick-header {
+  .span h4 {
+    padding: 5px;
+  }
+}
+.slick-dots li button::before {
+  font-size: 10px;
+}

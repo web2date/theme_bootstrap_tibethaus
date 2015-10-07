@@ -1,0 +1,84 @@
+/*------------vtodo------------*/
+.tx-cal-controller {
+    .vtodo {
+        cursor: default;
+        color: #fff;
+        -moz-user-select: none;
+    }
+
+    .vtodo .freq {
+        vertical-align: text-bottom;
+    }
+
+    .vtodo dt {
+        margin-top: -1px;
+        font: bold 80%/normal Verdana, sans-serif;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 0 0 1px 0;
+        text-align: left;
+    }
+
+    .vtodo dl {
+        margin: 0;
+        padding: 0 0 1px 0;
+        border-left: 1px solid;
+        border-right: 1px solid;
+        overflow: hidden;
+    }
+
+    .vtodo dd {
+        margin: 0;
+        overflow: hidden;
+        padding: 0 1px;
+        font: 100%/1.3em Verdana, sans-serif;
+        text-align: left;
+        word-wrap: break-word;
+    }
+
+    .gridcontainertop .vtodo {
+        width: 100%;
+    }
+
+    .weekview .vtodo,
+    .dayview .vtodo {
+        -moz-border-radius: 3px;
+        position: absolute;
+    }
+
+    .weekview .allday .vtodo,
+    .dayview .allday .vtodo {
+        position: relative;
+    }
+
+    .month-large .vtodo,
+    .weekview .wk-allday .vtodo,
+    .dayview .wk-allday .vtodo {
+        position: inherit;
+    }
+
+    .month-large .vtodo {
+        line-height: normal;
+        margin: 1px;
+        text-align: left;
+    }
+
+    .month-large div.vtodo a:link span.popup,
+    .month-large div.vtodo a:visited span.popup,
+    .month-medium span.popup {
+        display: none;
+    }
+
+    .month-large div.vtodo a:hover span.popup,
+    .month-medium .dayNum:hover span.popup {
+        position: absolute;
+        margin: 15px 0 0 20px;
+        background-color: beige;
+        max-width: 220px;
+        border: 1px solid #C0C0C0;
+        font: normal 10px/12px verdana;
+        color: #000;
+        text-align: left;
+        display: block;
+    }
+}

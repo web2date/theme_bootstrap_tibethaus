@@ -1,0 +1,481 @@
+# Clear out the existing CSS
+plugin.tx_cal_controller._CSS_DEFAULT_STYLE >
+
+
+plugin.tx_cal_controller.view.list.enableWeekWrapper = 0
+plugin.tx_cal_controller.view{
+	list.weekWrapper.10.wrap = <dt style="background-color:#CCCCCC;">|. Woche</dt>
+}
+
+#plugin.tx_cal_controller.view.list.enableMonthWrapper = 1
+#plugin.tx_cal_controller.view.list.monthWrapper.10.wrap = <dt class="list_month">|</dt>
+
+
+//Rechte allgemein
+plugin.tx_cal_controller.rights.admin.group = 3
+plugin.tx_cal_controller.rights.allowedGroups = 3
+
+//Rechte Edit
+plugin.tx_cal_controller.rights.edit = 1
+plugin.tx_cal_controller.rights.edit.event.saveEventToPid = 152
+plugin.tx_cal_controller.rights.edit.event.group = 3
+plugin.tx_cal_controller.rights.edit.event.enableAllFields.group = 3
+plugin.tx_cal_controller.rights.edit.event.inPast.group = 3
+plugin.tx_cal_controller.rights.edit.event.onlyOwnEvents.group = 3
+plugin.tx_cal_controller.rights.edit.event.startedEvents.group = 3
+#plugin.tx_cal_controller.rights.edit.event.timeOffset = 43200 //12 Stunden
+#plugin.tx_cal_controller.rights.edit.event.timeOffset = -43200
+plugin.tx_cal_controller.rights.edit.event.timeOffset = 531536000 //365 Tage
+plugin.tx_cal_controller.rights.edit.event.addFeGroupToShared = 1
+plugin.tx_cal_controller.rights.edit.event.fields.category.required =1
+
+plugin.tx_cal_controller.rights.edit.calendar.group = 3
+plugin.tx_cal_controller.rights.edit.calendar.onlyOwnCalendar.group = 3
+plugin.tx_cal_controller.rights.edit.calendar.publicCalendar.group = 3
+
+plugin.tx_cal_controller.rights.edit.location.enableAllFields.group = 3
+plugin.tx_cal_controller.rights.edit.organizer.enableAllFields.group = 3
+plugin.tx_cal_controller.rights.edit.exceptionEvent.allowedToEditExceptionEvents.group = 3
+plugin.tx_cal_controller.rights.edit.exceptionEvent.group = 3
+
+//Rechte Create
+plugin.tx_cal_controller.rights.create.event.group = 3
+plugin.tx_cal_controller.rights.create.event.saveEventToPid = 152
+plugin.tx_cal_controller.rights.create.event.publicEvents.group = 3
+plugin.tx_cal_controller.rights.create.event.enableAllFields.group = 3
+plugin.tx_cal_controller.rights.create.event.timeOffset = -43200
+plugin.tx_cal_controller.rights.create.event.fields.image.group = 3
+#plugin.tx_cal_controller.rights.create.event.fields.teaser.required = 1
+plugin.tx_cal_controller.rights.create.event.fields.category.required =1
+
+plugin.tx_cal_controller.rights.create.exceptionEvent.saveExceptionEventToPid = 152
+plugin.tx_cal_controller.rights.create.exceptionEvent.allowedToCreateExceptionEvents.group = 3
+
+plugin.tx_cal_controller.rights.create.exceptionEvent.group = 3
+plugin.tx_cal_controller.rights.create.exceptionEvent.enableAllFields.group = 3
+
+plugin.tx_cal_controller.rights.create.location.saveLocationToPid = 152
+plugin.tx_cal_controller.rights.create.location.enableAllFields.group = 3
+
+plugin.tx_cal_controller.rights.create.organizer.saveOrganizerToPid = 152
+plugin.tx_cal_controller.rights.create.organizer.enableAllFields.group = 3
+
+
+plugin.tx_cal_controller.rights.delete.event.allowedToDeleteEvents.group = 3
+
+
+plugin.tx_cal_controller.view.other.userFolderId = 273
+
+plugin.tx_cal_controller._LOCAL_LANG.de {
+	l_event_teaser = Kurztext Home
+	l_event__organizer = Veranstalter
+	l_event_start_day = Startdatum
+	l_event_end_day = Stopdatum
+	#l_event_type_0 = Fester Termin
+	#l_event_type_1 = Interner Link
+	#l_event_type_2 = Externer Link
+	#l_event_type_3 = Wunschtermin
+	#l_event_type_4 = Besprechung
+	l_false = nein
+	l_every_weekday = wochentags (Mo. - Fr.)
+	l_more = &raquo; Details
+	l_event_more = &raquo; Details
+}
+[globalVar = TSFE:id = 274,275]
+	plugin.tx_cal_controller._LOCAL_LANG.de{
+		l_more = Anmelden
+		l_event_more = Anmelden
+	}
+[GLOBAL]
+
+
+plugin.tx_cal_controller.additionalWrapperClasses = calwrapper
+plugin.tx_cal_controller.view.event.useDateSelector = 1
+plugin.tx_rlmpdateselectlib.calConf.inputFieldDateTimeFormat = %d.%m.%y
+#plugin.tx_cal_controller.dateParserConf.USmode = 1
+plugin.tx_cal_controller.dateConfig.dayPosition = 0
+plugin.tx_cal_controller.dateConfig.monthPosition = 1
+plugin.tx_cal_controller.dateConfig.yearPosition = 2
+plugin.tx_cal_controller.dateConfig.splitSymbol = .
+
+// FE-Datumsformat create event (FE)
+plugin.tx_cal_controller.rights.create.event.fields.startdate.constrain.1{
+	regexp = /(\d{2}).(\d{2}).(\d{4})/
+	message.dataWrap = <span class="constrain">{LLL:EXT:cal/controller/locallang.xml:l_wrong_date} (dd.mm.yyyy)</span>
+}
+
+plugin.tx_cal_controller.rights.create.event.fields.enddate.constrain.1{
+	regexp = /(\d{2}).(\d{2}).(\d{4})/
+	message.dataWrap = <span class="constrain">{LLL:EXT:cal/controller/locallang.xml:l_wrong_date} (dd.mm.yyyy)</span>
+}
+
+// Datumsformat edit event (FE)
+plugin.tx_cal_controller.rights.edit.event.fields.startdate.constrain.1{
+	regexp = /(\d{2}).(\d{2}).(\d{4})/
+	message.dataWrap = <span class="constrain">{LLL:EXT:cal/controller/locallang.xml:l_wrong_date} (dd.mm.yyyy)</span>
+}
+
+plugin.tx_cal_controller.rights.edit.event.fields.enddate.constrain.1{
+	regexp = /(\d{2}).(\d{2}).(\d{4})/
+	message.dataWrap = <span class="constrain">{LLL:EXT:cal/controller/locallang.xml:l_wrong_date} (dd.mm.yyyy)</span>
+}
+
+
+plugin.tx_cal_controller.view.search_event.event.useDateSelector = 1
+
+
+plugin.tx_cal_controller.view.create_event.rte.width = 640
+plugin.tx_cal_controller.view.edit_event.rte.width = 640
+plugin.tx_cal_controller.view.create_event.rte.height = 400
+plugin.tx_cal_controller.view.edit_event.rte.height = 400
+
+plugin.tx_cal_controller.view.search.defaultValues.end_day = +6 month
+
+plugin.tx_cal_controller.view.category.tree.calendarTitle.dataWrap = <div class="calendarTitle">|</div>
+plugin.tx_cal_controller.view.search_event.event.rlmp_dateselectorlib_config.inputFieldLabel = Kalender
+plugin.tx_cal_controller.view.search_event.event.maxRecurringEvents = 1
+
+plugin.tx_cal_controller.rights.delete.event.group = 3
+plugin.tx_cal_controller.rights.delete.event.startedEvents.group = 3
+plugin.tx_cal_controller.rights.delete.event.onlyOwnEvents.group = 3
+
+
+plugin.tx_cal_controller.view.location.location.description.dataWrap = <div id="location-desc">%%%DESCRIPTION_LABEL%%%:&nbsp; |</div>
+plugin.tx_cal_controller.view.location.location.name.dataWrap = <div id="location-name">|</div>
+plugin.tx_cal_controller.view.create_event.redirectAfterCreateToPid = 263
+plugin.tx_cal_controller.view.create_event.redirectAfterCreateToView = month
+plugin.tx_cal_controller.view.edit_event.redirectAfterEditToPid = 263
+plugin.tx_cal_controller.view.edit_event.redirectAfterEditToView = month
+plugin.tx_cal_controller.view.edit_event.redirectAfterCreateToPid = 263
+plugin.tx_cal_controller.view.edit_event.redirectAfterCreateToView = month
+plugin.tx_cal_controller.view.delete_event.redirectAfterDeleteToPid = 263
+plugin.tx_cal_controller.view.delete_event.redirectAfterDeleteToView = month
+
+
+plugin.tx_cal_controller.view.event.event.alldayTitle.dataWrap = <h3>|</h3>
+plugin.tx_cal_controller.view.event.event.title.dataWrap = <h3>|</h3>
+plugin.tx_cal_controller.view.event.event.teaser.dataWrap = <p><b>|</b></p>
+plugin.tx_cal_controller.view.event.event.description.dataWrap = <p>|</p>
+plugin.tx_cal_controller.view.event.event.organizer.dataWrap = <p><b>%%%ORGANIZER%%%</b>&nbsp;&#124;&nbsp; |</p>
+plugin.tx_cal_controller.view.event.event.location.dataWrap = <p><b>%%%LOCATION%%%</b>&nbsp;&#124;&nbsp; |</p>
+plugin.tx_cal_controller.view.list.event.teaser.override.cObject.crop = 500|...|1
+#plugin.tx_cal_controller.view.list.event.tx_am_costs.dataWrap = <p><b>Kostenb:</b>|</p>
+plugin.tx_cal_controller.view.list.event.category.dataWrap >
+plugin.tx_cal_controller.view.list.event.description.crop = 2000|...
+plugin.tx_cal_controller.view.list.event.description.stripHtml = 0
+
+#plugin.tx_cal_controller.view.event.event.startdate >
+plugin.tx_cal_controller.view.event.event.enddate >
+plugin.tx_cal_controller.view.event.event.starttime >
+plugin.tx_cal_controller.view.event.event.endtime >
+
+
+#CAL EXTENDED#
+plugin.tx_cal_controller{
+	view{
+		search_event{
+			event{
+				title = TEXT
+				title{
+					current = 1
+					required =1
+					dataWrap = <div class="tx-am-title"> | </div>
+				}
+				teaser = TEXT
+				teaser{
+					current = 1
+					required =1
+					dataWrap = <div class="tx-am-teaser"> | </div>
+				}
+				tx_am_textdate = TEXT
+				tx_am_textdate{
+					current = 1
+					required =1
+					dataWrap = <div class="tx-am-label"> | </div>
+				}
+
+				tx_am_costs = TEXT
+				tx_am_costs{
+					current = 1
+					required =1
+					dataWrap = <div><span class="tx-am-label">Kosten</span>&nbsp;&#124;&nbsp; | </div>
+				}
+				tx_am_time = TEXT
+				tx_am_time{
+					current = 1
+					required =1
+					dataWrap = <div><span class="tx-am-label">Zeit</span>&nbsp;&#124;&nbsp; | </div>
+				}
+				tx_am_printtext = TEXT
+				tx_am_printtext{
+					current = 1
+					required =1
+					dataWrap = <div> | </div>
+				}
+				alldayTitle.dataWrap = <div><span class="tx-am-title"> |</span></div>
+			}
+		}
+		list{
+		event{
+			tx_am_costs = TEXT
+			tx_am_costs{
+				current = 1
+				required =1
+				dataWrap = <p><b>Kosten</b>&nbsp;&#124;&nbsp; | </p>
+			}
+			tx_am_addinfo = TEXT
+			tx_am_addinfo {
+				current = 1
+				required = 1
+				dataWrap = <p><b>Zusatzinfo</b>&nbsp;&#124;&nbsp; | </p>
+			}
+			tx_am_time = TEXT
+			tx_am_time{
+				current = 1
+				required =1
+				dataWrap = <p><b>Zeit</b>&nbsp;&#124;&nbsp; | </p>
+			}
+			location.dataWrap = <p><b>%%%LOCATION%%%</b>&nbsp;&#124;&nbsp; |</p>
+			organizer.dataWrap = <p><b>%%%ORGANIZER%%%</b>&nbsp;&#124;&nbsp; |</p>
+			teaser.dataWrap = <p><b>|</b></p>
+		  }
+		}
+		event{
+			event{
+				tx_am_costs = TEXT
+				tx_am_costs{
+					current = 1
+					required =1
+					dataWrap = <p><b>Kosten</b>&nbsp;&#124;&nbsp; | </p>
+				}
+				tx_am_time = TEXT
+				tx_am_time{
+					current = 1
+					required =1
+					dataWrap = <p><b>Zeit</b>&nbsp;&#124;&nbsp; | </p>
+				}
+				tx_am_printtext = TEXT
+				tx_am_printtext{
+					current = 1
+					required =1
+					dataWrap = <p><b>Kurztext Druck</b>&nbsp;&#124;&nbsp; | </p>
+				}
+				tx_am_addinfo = TEXT
+				tx_am_addinfo{
+					current = 1
+					required =1
+					dataWrap = <p><b>Zusatzinfo</b>&nbsp;&#124;&nbsp; | </pv>
+				}
+				tx_am_teaserdate = TEXT
+				tx_am_teaserdate{
+					current = 1
+					required =1
+					#dataWrap = <p><b>Teaserdatum</b>&nbsp;&#124;&nbsp; | </p>
+				}
+				tx_am_textdate = TEXT
+				tx_am_textdate{
+					current = 1
+					required =1
+					dataWrap = <p><b> |</b></p>
+				}
+				image.stdWrap.dataWrap = <div> | </div>
+
+			}
+		}
+	}
+}
+plugin.tx_cal_controller{
+	view{
+		confirm_event{
+			tx_am_costs_stdWrap{
+				dataWrap = <div><label for="tx_am_costs">Kosten###TX_AM_COSTS_REQUIRED###:</label>|<input type="hidden" value="###TX_AM_COSTS_VALUE###" name="tx_cal_controller[tx_am_costs]" /></div>
+			}
+			tx_am_time_stdWrap{
+				dataWrap = <div><label for="tx_am_time">Zeit###TX_AM_TIME_REQUIRED###:</label>|<input type="hidden" value="###TX_AM_TIME_VALUE###" name="tx_cal_controller[tx_am_time]" /></div>
+			}
+			tx_am_printtext_stdWrap{
+				dataWrap = <div><label for="tx_am_printtext">Kurztext Druck:</label><br><input type="hidden" value="###TX_AM_PRINTTEXT_VALUE###" name="tx_cal_controller[tx_am_printtext]"/></div>
+			}
+			tx_am_addinfo_stdWrap{
+				dataWrap = <div><label for="tx_am_addinfo">Zusatzinfo###TX_AM_ADDINFO_REQUIRED###:</label>|<input type="hidden" value="###TX_AM_ADDINFO_VALUE###" name="tx_cal_controller[tx_am_addinfo]" /></div>
+			}
+			tx_am_teaserdate_stdWrap{
+				dataWrap = <div><label for="tx_am_teaserdate">Datum kurz (dd.mm.yyyy)###TX_AM_TEASERDATE_REQUIRED###:</label>|<input type="hidden" value="###TX_AM_TEASERDATE_VALUE###" name="tx_cal_controller[tx_am_teaserdate]" /></div>
+			}
+			tx_am_textdate_stdWrap{
+				dataWrap = <div><label for="tx_am_textdate">Datum lang (Wochentag, dd. Monat Jahr)###TX_AM_TEXTDATE_REQUIRED###:</label>|<input type="hidden" value="###TX_AM_TEXTDATE_VALUE###" name="tx_cal_controller[tx_am_textdate]" /></div>
+			}
+
+		}
+
+
+		create_event{
+			# @description    Standard wrap for the teaser field
+			teaser_stdWrap {
+				dataWrap = <p><label for="teaser">{LLL:EXT:cal/controller/locallang.xml:l_event_teaser}###TEASER_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[teaser]" id="teaser"/></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_costs_stdWrap{
+				dataWrap = <p><label for="tx_am_costs">Kosten###TX_AM_COSTS_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_costs]" id="tx_am_costs" /></p>
+				htmlSpecialChars = 1
+			}
+
+			tx_am_time_stdWrap{
+				dataWrap = <p><label for="tx_am_time">Zeit###TX_AM_TIME_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_time]" id="tx_am_time"/></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_printtext_stdWrap{
+				dataWrap = <p><label for="tx_am_printtext">Kurztext Druck###TX_AM_PRINTTEXT_REQUIRED###:</label><textarea name="tx_cal_controller[tx_am_printtext]" cols="50" rows="10">|</textarea></p>
+				// Disable htmlSpecialChars, if you are using the RTE
+				#htmlSpecialChars = 1
+			}
+			tx_am_addinfo_stdWrap{
+				dataWrap = <p><label for="tx_am_addinfo">Zusatzinfo###TX_AM_ADDINFO_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_addinfo]" /></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_teaserdate_stdWrap{
+				dataWrap = <p><label for="tx_am_teaserdate">Datum kurz (dd.mm.yyyy)###TX_AM_TEASERDATE_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_teaserdate]" /></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_textdate_stdWrap{
+				dataWrap = <p><label for="tx_am_textdate">Datum lang (Wochentag, dd. Monat Jahr)###TX_AM_TEXTDATE_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_textdate]" /></p>
+				htmlSpecialChars = 1
+			}
+		}
+		edit_event{
+			# @description    Standard wrap for the teaser field
+			teaser_stdWrap {
+				dataWrap = <p><label for="teaser">{LLL:EXT:cal/controller/locallang.xml:l_event_teaser}###TEASER_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[teaser]" /></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_costs_stdWrap{
+				dataWrap = <p><label for="tx_am_costs">Kosten###TX_AM_COSTS_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_costs]" /></p>
+				htmlSpecialChars = 1
+			}
+
+			tx_am_time_stdWrap{
+				dataWrap = <p><label for="tx_am_time">Zeit###TX_AM_TIME_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_time]" /></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_printtext_stdWrap{
+				dataWrap = <p><label for="tx_am_printtext">Kurztext Druck###TX_AM_PRINTTEXT_REQUIRED###:</label><textarea name="tx_cal_controller[tx_am_printtext]" cols="50" rows="10">|</textarea></p>
+				// Disable htmlSpecialChars, if you are using the RTE
+				#htmlSpecialChars = 1
+			}
+			tx_am_addinfo_stdWrap{
+				dataWrap = <p><label for="tx_am_addinfo">Zusatzinfo###TX_AM_ADDINFO_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_addinfo]" /></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_teaserdate_stdWrap{
+				dataWrap = <p><label for="tx_am_teaserdate">Datum kurz (dd.mm.yyyy)###TX_AM_TEASERDATE_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_teaserdate]" /></p>
+				htmlSpecialChars = 1
+			}
+			tx_am_textdate_stdWrap{
+				dataWrap = <p><label for="tx_am_textdate">Datum lang (Wochentag, dd. Monat Jahr)###TX_AM_TEXTDATE_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[tx_am_textdate]" /></p>
+				htmlSpecialChars = 1
+			}
+		}
+
+	}
+}
+
+plugin.tx_cal_controller.rights{
+	create.event{
+		additionalFields = tx_am_printtext,tx_am_teaserdate,tx_am_textdate,tx_am_time,tx_am_costs,tx_am_addinfo
+		fields{
+			tx_am_printtext{
+				public= 1
+				required = 0
+			}
+			tx_am_teaserdate{
+				public= 1
+				required = 1
+			}
+			tx_am_textdate{
+				public= 1
+				required = 1
+			}
+			tx_am_time{
+				public= 1
+				required = 0
+			}
+			tx_am_costs{
+				public= 1
+				required = 0
+			}
+			tx_am_addinfo{
+				public= 1
+				required = 0
+			}
+		}
+	}
+	edit.event.additionalFields = tx_am_printtext, tx_am_teaserdate,tx_am_textdate,tx_am_time,tx_am_costs, tx_am_addinfo
+	confirm.event.additionalFields = tx_am_printtext, tx_am_teaserdate,tx_am_textdate,tx_am_time,tx_am_costs, tx_am_addinfo
+	delete.event.additionalFields = tx_am_printtext, tx_am_teaserdate,tx_am_textdate,tx_am_time,tx_am_costs, tx_am_addinfo
+}
+
+
+plugin.tx_cal_controller.view.location.location.includeEventsInResult = 0
+plugin.tx_cal_controller.view.organizer.organizer.includeEventsInResult = 0
+
+
+plugin.tx_cal_controller {
+	view {
+		#timeFormat = %H:%M
+		#dateFormat = %d. %B
+
+
+		#day.dateFormatWeekList = %A, %d. %b
+		day.dateFormatWeekList = %d.%m.%y
+		#day.dateFormatDay = %a, %d. %b
+		day.dateFormatDay = %d.%m.%y
+		day.timeFormatDay = %H:%M
+		day.event.timeFormat = %H:%M
+		day.eventTimeFormat = %H:%M
+		day.eventDateFormat = %d.%m.%y
+		day.event.displayDate.strftime = %d. %B %Y
+		day.displayDate.strftime = %d. %B %Y
+
+		week.dateFormatDay = %d.%m.%y
+		week.timeFormatDay = %H:%M
+		week.event.timeFormat = %H:%M
+		week.displayDate.1.strftime = %d.%b
+		week.displayDate.2.strftime = %d.%b %Y
+		week.dayViewLink.strftime = %a %d.%m.
+
+		month.event.dateFormat = %d.%m.%Y
+
+		search_event.event.timeFormat = %H:%M
+		search_event.event.dateFormat =  %d. %B
+		#list.event.dateFormat = %d. %B
+		list.event.dateFormat = %d.%m.%y
+
+		organizer.event.dateFormat = %d.%m.%Y
+	}
+}
+
+
+plugin.tx_cal_controller.view.confirm_event.description_stdWrap.dataWrap = <div><label for="description">%%%EVENT_DESCRIPTION%%%:</label></br>|<input type="hidden" value="###DESCRIPTION_VALUE###" name="tx_cal_controller[description]"/></div>
+plugin.tx_cal_controller.view.delete_event.description_stdWrap.dataWrap = <div><label for="description">%%%EVENT_DESCRIPTION%%%:</label></br>|<input type="hidden" value="###DESCRIPTION_VALUE###" name="tx_cal_controller[description]"/></div>
+
+plugin.tx_cal_controller.view.event.event {
+	anfangsdatum = TEXT
+	#anfangsdatum.value = Ha!
+	anfangsdatum.field = tx_am_teaserdate
+	#anfangsdatum.date = d.m.Y
+
+	title_pur = TEXT
+	title_pur.field = title
+	title_pur.htmlSpecialChars = 1
+
+	uid = TEXT
+	uid.current = 1
+
+}
+
+plugin.tx_cal_controller.view.search.searchEventFieldList = title,organizer,location,description,teaser,tx_am_printtext
+
+plugin.tx_cal_controller.view.event.event.image.textPos.override = 0
+plugin.tx_cal_controller.view.event.event.image.layout.key.override = 0
+plugin.tx_cal_controller.view.list.event.image.textPos.override = 0
+plugin.tx_cal_controller.view.list.event.image.layout.key.override = 0

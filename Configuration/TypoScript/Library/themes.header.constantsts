@@ -1,0 +1,59 @@
+#############################################
+# Header: Header constants
+#############################################
+
+# Header info
+#############################################
+# cat=header,basic/header_info/; type=string; label= Header: phone number
+themes.configuration.header.phone = +0 (000) 000-00-00
+
+# cat=header,basic/header_info/; type=string; label= Header: E-Mail address
+themes.configuration.header.email = contact@example.com
+
+# cat=header,basic/header_info/; type=string; label= Header: Brand name
+themes.configuration.brand.name =  Tibethaus <span class="hidden-sm">Deutschland</span>
+
+themes.configuration.header.logo.main.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/logo.png
+
+logolink_alt = TIBETHAUS DEUTSCHLAND e.V.
+logolink_text = TIBETHAUS DEUTSCHLAND e.V.
+tara_alt = Grüne Tara
+tara_text = Grüne Tara
+slogan_alt = Slogan
+slogan_text = Slogan
+
+[globalVar = GP:L=0]
+logolink_alt = TIBETHAUS DEUTSCHLAND e.V.
+logolink_text = TIBETHAUS DEUTSCHLAND e.V.
+tara_alt = Grüne Tara
+tara_text = Grüne Tara
+slogan_alt = Slogan
+slogan_text = Slogan
+[end]
+
+[globalVar = GP:L=1]
+logolink_alt = TIBET HOUSE GERMANY
+logolink_text = TIBET HOUSE GERMANY
+tara_alt = Green Tara
+tara_text = Green Tara
+slogan_alt = Slogan
+slogan_text = Slogan
+[end]
+
+[globalVar = GP:L=2]
+logolink_alt = རྗར་མེ་ནི་བོད་ཀྱི་ཁང་པ།
+logolink_text = རྗར་མེ་ནི་བོད་ཀྱི་ཁང་པ།
+tara_alt = fehlt
+tara_text = fehlt
+slogan_alt = Slogan
+slogan_text = Slogan
+[end]
+
+[globalVar = GP:L=3]
+logolink_alt = fehlt
+logolink_text = fehlt
+tara_alt = fehlt
+tara_text = fehlt
+slogan_alt = Slogan
+slogan_text = Slogan
+[end]

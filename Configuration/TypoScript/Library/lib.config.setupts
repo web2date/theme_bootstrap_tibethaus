@@ -1,0 +1,5 @@
+config {
+	// Disable Image Upscaling
+	noScaleUp = 1
+
+}

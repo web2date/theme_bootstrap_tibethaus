@@ -1,0 +1,17 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+    <f:layout name="Newsletter" />
+    <f:section name="Default">
+        <!-- theme_bootstrap_tibethaus: Templates/Theme/NewsletterContent.html [begin] -->
+
+        <!--TYPO3SEARCH_begin-->
+        <f:cObject typoscriptObjectPath="lib.content.main" />
+        <!--TYPO3SEARCH_end-->
+
+        <!-- theme_bootstrap_tibethaus: Templates/Theme/NewsletterContent.html [end] -->
+    </f:section>
+
+    <f:section name="Footer">
+        <f:render partial="Newsletter/Footer" />
+    </f:section>
+</div>

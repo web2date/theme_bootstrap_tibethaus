@@ -1,0 +1,33 @@
+##
+# German Translation (as default)
+#
+  lang.currentLocalLang = de
+ 
+  lang.search.placeholder = Suche nach...
+ 
+##
+# English Translation
+#
+[globalVar = GP:L = 1]
+  lang.currentLocalLang = en
+
+  lang.search.placeholder = Search for...
+[GLOBAL]
+
+##
+# tibetian Translation
+#
+[globalVar = GP:L = 2]
+  lang.currentLocalLang = bo
+
+  lang.search.placeholder = འཚོལ་བ...་
+[GLOBAL]
+
+##
+# Chinese Translation
+#
+[globalVar = GP:L = 3]
+  lang.currentLocalLang = cn
+
+  lang.search.placeholder = 搜索...
+[GLOBAL]

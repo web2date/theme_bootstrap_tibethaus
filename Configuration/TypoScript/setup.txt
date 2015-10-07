@@ -1,0 +1,28 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_bootstrap/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_bootstrap_tibethaus/Configuration/Elements/TypoScript/" extensions="setupts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_bootstrap_tibethaus/Configuration/TypoScript/Library/" extensions="setupts">
+
+# Extensions
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_bootstrap_tibethaus/Resources/Private/Extensions/News/TypoScript/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_bootstrap_tibethaus/Resources/Private/Extensions/Rtehtmlarea/TypoScript/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_bootstrap_tibethaus/Resources/Private/Extensions/IndexedSearch/TypoScript/setup.txt">
+
+lib.containerBackgroundImage >
+lib.containerBackgroundImage = COA
+lib.containerBackgroundImage {
+	if.isTrue.field = media
+	10 = FILES
+	10 {
+		references {
+			table = tt_content
+			fieldName = media
+			uid.field = uid
+		}
+		maxItems = 1
+		renderObj = TEXT
+		renderObj {
+			stdWrap.dataWrap = style="background:url({file:current:publicUrl}) no-repeat center center; background-size:cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{file:current:publicUrl}',sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{file:current:publicUrl}', sizingMethod='scale')";"
+			noTrimWrap = | ||
+		}
+	}
+}

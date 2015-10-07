@@ -1,0 +1,21 @@
+lib.header.special.slogan = IMAGE
+lib.header.special.slogan.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/slogan_de.jpg
+lib.header.special.slogan.params = class="img-responsive"
+lib.header.special.slogan.altText = {$slogan_alt}
+lib.header.special.slogan.titleText = {$slogan_text}
+
+[globalVar = GP:L=0]
+    lib.header.special.slogan.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/slogan_de.jpg
+[end]
+
+[globalVar = GP:L=1]
+    lib.header.special.slogan.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/slogan_en.jpg
+[end]
+
+[globalVar = GP:L=2]
+    lib.header.special.slogan.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/slogan_tib.jpg
+[end]
+
+[globalVar = GP:L=3]
+    lib.header.special.slogan.file = EXT:theme_bootstrap_tibethaus/Resources/Public/Images/slogan_cn.jpg
+[end]

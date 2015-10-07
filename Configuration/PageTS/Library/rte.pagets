@@ -1,0 +1,30 @@
+RTE {
+	default	 {
+		buttons {
+			link.properties.class {
+				allowedClasses := addToList(button-green,button-blue,button-orange,button-red,button-darkred,button-grey)
+			}
+		}
+	}
+	classes {
+		button-green {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.green
+		}
+		button-blue {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.blue
+		}
+		button-orange {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.orange
+		}
+		button-red {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.red
+		}
+		button-darkred {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.darkred
+		}
+		button-grey {
+			name = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.grey
+		}
+	}
+}
+

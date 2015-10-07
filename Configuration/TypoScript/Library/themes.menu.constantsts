@@ -1,0 +1,35 @@
+# customsubcategory=menu_footer_top =Menu-Footer-Top
+
+######################################################
+# Menu: Menu constants special theme_bootstrap_tibethaus
+######################################################
+
+# cat=menu,advanced/menu_footer/; type=int+; label= Content footer: Grid-Elements-Container uid where the content items are located
+themes.configuration.menu.footer.gridContainerUid = 0
+
+themes.configuration.menu.breadcrumb.cssClasses = breadcrumb pull-right hidden-xs
+themes.configuration.menu.sub.cssClasses = nav nav-pills nav-stacked bs-sidebar
+
+
+themes.configuration.menu.footer.cssClasses = list-inline inline-block
+themes.configuration.menu.footer.divider = <span> &#124; </span>
+
+# Menu top footer
+#############################################
+# cat=menu,advanced/menu_footer_top/; type=string; label= Menu Top footer: Exclude uid list (12,13,...)
+themes.configuration.menu.footer.top.excludeUidList =
+
+# cat=menu,expert/menu_footer_top/; type=string; label= Menu Top footer: Prefix for each menu item (for example: <span class="glyphicon glyphicon-chevron-right"></span>)
+themes.configuration.menu.footer.top.prefix =
+
+# cat=menu,advanced/menu_footer_top/; type=int+; label= Menu Top footer: Container pid where the menu items are located
+themes.configuration.menu.footer.top.containerPid = 0
+
+# cat=menu,expert/menu_footer_top/; type=string; label= Menu Top footer: CSS classes
+themes.configuration.menu.footer.top.cssClasses = list-inline
+
+# cat=menu,expert/menu_footer_top/; type=string; label= Menu Top footer: Divider (for example: <li class="divider"> &#124; </li>, &#124; is equal to a | pipe)
+themes.configuration.menu.footer.top.divider = <li class="divider"> &#124; </li>
+
+# cat=menu,advanced/menu_footer_top/; type=options[0,1]; label= Menu Top footer: Include also items which are marked as 'include not in menu'
+themes.configuration.menu.footer.top.includeNotInMenu = 0

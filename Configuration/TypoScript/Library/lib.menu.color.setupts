@@ -1,0 +1,22 @@
+lib.menu.color = TEXT
+lib.menu.color.value = 
+
+[PIDinRootline = 21]
+lib.menu.color.value = color-21
+[global]
+
+[PIDinRootline = 22]
+lib.menu.color.value = color-22
+[global]
+
+[PIDinRootline = 23]
+lib.menu.color.value = color-23
+[global]
+
+[PIDinRootline = 24]
+lib.menu.color.value = color-24
+[global]
+
+[PIDinRootline = 25]
+lib.menu.color.value = color-25
+[global]

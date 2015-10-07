@@ -1,0 +1,61 @@
+themes {
+	content {
+		# Variants for content elements
+		variants {
+			default {
+				social = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.social
+			}
+
+			# Special variant for Header
+			# Used by ctype header
+			# Will be merged with default
+			header {
+				alert-dismissable = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.alert_dismissable
+				infoboard-green = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_green
+				infoboard-blue = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_blue
+				infoboard-orange = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_orange
+				infoboard-red = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_red
+			}
+
+			# ctype: text
+			text {
+				alert-dismissable = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.alert_dismissable
+				infoboard-green = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_green
+				infoboard-blue = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_blue
+				infoboard-orange = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_orange
+				infoboard-red = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_red
+			}
+
+			# ctype: gridelements_pi1
+			gridelements_pi1 {
+				tabs {
+					navigation-pills-green = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.navigation_pills_green
+					navigation-pills-blue = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.navigation_pills_blue
+					navigation-pills-orange = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.navigation_pills_orange
+					navigation-pills-red = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.navigation_pills_red
+				}
+				container {
+					alert-dismissable = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.alert_dismissable
+					infoboard-green = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_green
+					infoboard-blue = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_blue
+					infoboard-orange = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_orange
+					infoboard-red = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.infoboard_red
+				}
+				singleColumnHeaderFooter {
+					panel-green = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.panel_green
+					panel-blue = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.panel_blue
+					panel-orange = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.panel_orange
+					panel-red = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.variants.panel_red
+				}
+			}
+			themes_buttoncontent_pi1 {
+				button-green = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.green
+				button-blue = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.blue
+				button-orange = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.orange
+				button-red = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.red
+				button-darkred = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.darkred
+				button-grey = LLL:EXT:theme_bootstrap_tibethaus/Resources/Private/Language/locallang.xlf:content.buttons.gray
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+plugin.tx_powermail.settings.setup.prefill {
+	studienprogramm = TEXT
+	studienprogramm.data = page:title
+
+	caluid = TEXT
+	caluid.data = GP:tx_cal_controller|uid
+
+	programm = TEXT
+	programm.data = GP:tx_cal_event|title
+	programm.stdWrap.insertData = 1
+
+	termin = TEXT
+	termin.data = GP:tx_cal_event|tx_am_teaserdate
+	termin.stdWrap.insertData = 1
+
+	veranstaltung = RECORDS
+	veranstaltung {
+		wrap =|
+		source.data = GP:tx_cal_controller|uid
+		tables = tx_cal_event
+		conf.tx_cal_event = TEXT
+		conf.tx_cal_event.field = title
+	}
+	veranstaltungstermin2 = COA
+	veranstaltungstermin2.10 = RECORDS
+	veranstaltungstermin2.10 {
+		wrap =|&nbsp;&middot;&nbsp;
+		source.data = GP:tx_cal_controller|uid
+		tables = tx_cal_event
+		conf.tx_cal_event = TEXT
+		conf.tx_cal_event.field = tx_am_teaserdate
+	}
+	veranstaltungstermin2.20 = RECORDS
+	veranstaltungstermin2.20 {
+		wrap =|
+		source.data = GP:tx_cal_controller|uid
+		tables = tx_cal_event
+		conf.tx_cal_event = TEXT
+		conf.tx_cal_event.field = tx_am_time
+	}
+}

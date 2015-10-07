@@ -1,0 +1,24 @@
+lib.content.cssMap.variants {
+	alert-dismissable = alert alert-dismissable
+
+	infoboard-green = info-board info-board-green
+	infoboard-blue = info-board info-board-blue
+	infoboard-orange = info-board info-board-orange
+	infoboard-red = info-board info-board-red
+
+	social = social
+
+	navigation-pills-green = nav-pills-green
+	navigation-pills-blue = nav-pills-blue
+	navigation-pills-orange = nav-pills-orange
+	navigation-pills-red = nav-pills-red
+
+	buttons {
+		button-green = btn btn-green
+		button-blue = btn btn-blue
+		button-darkred = btn btn-darkred
+		button-red = btn btn-red
+		button-orange = btn btn-orange
+		button-grey = btn btn-grey
+	}
+}
