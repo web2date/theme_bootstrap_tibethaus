@@ -5,15 +5,14 @@ page {
 
 	}
 	includeJSFooter {
-
 		#JS Plugins
 		scrolltopcontrol = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/scrolltopcontrol.js
         imagesloaded = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/imagesloaded.pkgd.min.js
         isotope-pkgd = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/isotope.pkgd.min.js
 		#JS Custom
 		responsiveimages = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/responsiveImages.js
-		lightbox = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/lightbox.min.js
-        sticky = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/jquery.sticky.js
+		fancybox = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/Fancybox/jquery.fancybox.pack.js
+		sticky = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/jquery.sticky.js
         custom = EXT:theme_bootstrap_tibethaus/Resources/Public/JavaScript/custom.js
 	}
 }

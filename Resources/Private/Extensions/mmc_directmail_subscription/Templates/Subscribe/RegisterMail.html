@@ -1,0 +1,9 @@
+<f:translate key="mail.content.salutation"/> {address.firstName} {address.lastName}<br/>
+<br/>
+<f:translate key="mail.register.content.text.1"/> 
+<f:link.action action="registerConfirm" arguments="{addressUid: address.uid, evc: address.emailVerificationCode}" additionalParams="{L:sysLangUid}" absolute="true">
+	<f:translate key="mail.register.content.text.linked"/>
+</f:link.action>
+<f:translate key="mail.register.content.text.2"/><br/>
+<br/>
+<f:translate key="mail.content.closingphrase"/>

@@ -9,7 +9,7 @@ plugin.tx_cal_controller.emailName = Tibethaus Team
 plugin.tx_cal_controller.emailOrganisation = Tibethaus Deutschland e.V.
 
 plugin.tx_cal_controller.view.timeFormat = %H:%M
-plugin.tx_cal_controller.view.dateFormat = %B %d
+plugin.tx_cal_controller.view.dateFormat = %d.%m.
 #plugin.tx_cal_controller.view.imagePath = fileadmin/templates/tibethaus/extensions/cal/img
 #plugin.tx_cal_controller.view.imagePath = EXT:theme_bootstrap_tibethaus/Resources/Public/Extensions/Cal/Images
 plugin.tx_cal_controller.view.event.remind = 0

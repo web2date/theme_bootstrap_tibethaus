@@ -68,7 +68,7 @@ plugin.tx_cal_controller.view.other.userFolderId = 273
 
 plugin.tx_cal_controller._LOCAL_LANG.de {
 	l_event_teaser = Kurztext Home
-	l_event__organizer = Veranstalter
+	l_event_cal_organizer = Veranstalter
 	l_event_start_day = Startdatum
 	l_event_end_day = Stopdatum
 	#l_event_type_0 = Fester Termin
@@ -84,7 +84,7 @@ plugin.tx_cal_controller._LOCAL_LANG.de {
 [globalVar = TSFE:id = 274,275]
 	plugin.tx_cal_controller._LOCAL_LANG.de{
 		l_more = Anmelden
-		l_event_more = Anmelden
+		l_event_more = weitere Infos/Anmeldung
 	}
 [GLOBAL]
 
@@ -163,6 +163,7 @@ plugin.tx_cal_controller.view.list.event.teaser.override.cObject.crop = 500|...|
 plugin.tx_cal_controller.view.list.event.category.dataWrap >
 plugin.tx_cal_controller.view.list.event.description.crop = 2000|...
 plugin.tx_cal_controller.view.list.event.description.stripHtml = 0
+
 
 #plugin.tx_cal_controller.view.event.event.startdate >
 plugin.tx_cal_controller.view.event.event.enddate >
@@ -312,7 +313,7 @@ plugin.tx_cal_controller{
 		create_event{
 			# @description    Standard wrap for the teaser field
 			teaser_stdWrap {
-				dataWrap = <p><label for="teaser">{LLL:EXT:cal/controller/locallang.xml:l_event_teaser}###TEASER_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[teaser]" id="teaser"/></p>
+				dataWrap = <p><label for="teaser">%%%EVENT_TEASER%%%###TEASER_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[teaser]" id="teaser"/></p>
 				htmlSpecialChars = 1
 			}
 			tx_am_costs_stdWrap{
@@ -345,7 +346,7 @@ plugin.tx_cal_controller{
 		edit_event{
 			# @description    Standard wrap for the teaser field
 			teaser_stdWrap {
-				dataWrap = <p><label for="teaser">{LLL:EXT:cal/controller/locallang.xml:l_event_teaser}###TEASER_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[teaser]" /></p>
+				dataWrap = <p><label for="teaser">%%%EVENT_TEASER%%%###TEASER_REQUIRED###:</label><input type="text" value="|" size="50" name="tx_cal_controller[teaser]" /></p>
 				htmlSpecialChars = 1
 			}
 			tx_am_costs_stdWrap{
@@ -479,3 +480,4 @@ plugin.tx_cal_controller.view.event.event.image.textPos.override = 0
 plugin.tx_cal_controller.view.event.event.image.layout.key.override = 0
 plugin.tx_cal_controller.view.list.event.image.textPos.override = 0
 plugin.tx_cal_controller.view.list.event.image.layout.key.override = 0
+plugin.tx_cal_controller.view.list.event.image.1.imageLinkWrap.typolink.ATagParams.dataWrap >

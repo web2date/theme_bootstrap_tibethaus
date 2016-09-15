@@ -1,0 +1,18 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+	<f:flashMessages renderMode="div" />
+		
+	<h4><f:translate key="title.register"/></h4>
+	
+	<f:if condition="{address}">
+		<f:then>
+			<p><f:translate key="text.register-confirm" arguments="{0: '{address.email}'}"/></p>
+		</f:then>
+		<f:else>
+			<p><f:translate key="text.register-confirm-fail"/></p>
+		</f:else>
+	</f:if>
+
+</f:section>

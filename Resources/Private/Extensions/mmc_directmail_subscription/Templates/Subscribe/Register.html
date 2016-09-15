@@ -1,0 +1,76 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:flashMessages renderMode="div" />
+		
+	<h2><f:translate key="title.register"/></h2>
+		
+	<f:if condition="{address}">
+		
+		<f:then>
+			<p>
+				<f:translate key="text.registration-mail-sent.1"/><br/>
+				<f:translate key="text.registration-mail-sent.2"/>
+			</p>
+			<p>
+				<f:link.page>
+					<f:translate key="label.back"/>
+				</f:link.page>
+			</p>
+		</f:then>
+		
+		<f:else>
+			<f:form action="register" objectName="address" onsubmit="return mmcDmlSubscr.submitForm()" class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="mmcDms-gender"><f:translate key="label.gender"/></label>
+                    <div class="col-sm-10">
+                        <f:form.select
+                                class="form-controll"
+                                property="gender"
+                                size="1"
+                                id="mmcDms-gender"
+                                options="{m:'{f:translate(key : \'label.gender.m\')}' ,f:'{f:translate(key : \'label.gender.f\')}' }"
+                        />
+                    </div>
+				</div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="mmcDms-firstName"><f:translate key="label.first-name"/>*</label>
+                    <div class="col-sm-10">
+                        <f:form.textfield property="firstName" type="text" class="form-control validate required" id="mmcDms-firstName"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="mmcDms-lastName"><f:translate key="label.last-name"/>*</label>
+                    <div class="col-sm-10">
+                        <f:form.textfield property="lastName" type="text" class="form-control validate required" id="mmcDms-lastName"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="mmcDms-email"><f:translate key="label.email"/>*</label>
+                    <div class="col-sm-10">
+                        <f:form.textfield property="email" type="text" class="form-control validate required email repeat" id="mmcDms-email"/>
+                        <f:form.hidden property="moduleSysDmailHtml" value="1"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="mmcDms-email-repeat"><f:translate key="label.email.repeat"/>*</label>
+                    <div class="col-sm-10">
+                        <f:form.textfield name="email-repeat" type="text" class="form-control validate required email" id="mmcDms-email-repeat"/>
+                    </div>
+                </div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<f:form.textfield class="h" name="h1"/>
+						<f:form.submit class="btn btn-default" name="submitButton" value="{f:translate(key: 'label.submit')}"/>
+					</div>
+				</div>
+			</f:form>
+			<p>
+				<br/>
+				<f:link.action action="cancel"><f:translate key="label.cancel-link"/></f:link.action>
+			</p>
+		</f:else>
+		
+	</f:if>
+
+</f:section>

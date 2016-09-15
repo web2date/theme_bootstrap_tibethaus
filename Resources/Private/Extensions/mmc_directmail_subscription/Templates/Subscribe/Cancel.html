@@ -1,0 +1,63 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:flashMessages renderMode="div" />
+		
+	<h2><f:translate key="title.cancel"/></h2>
+		
+	<f:if condition="{email}">
+		
+		<f:then>
+			<f:if condition="{address}">
+				<f:then>
+					<p>
+						<f:translate key="text.cancel-mail-sent.1"/><br/>
+						<f:translate key="text.cancel-mail-sent.2"/>
+					</p>
+					<p>
+						<f:link.action action="cancel">
+							<f:translate key="label.back"/>
+						</f:link.action>
+					</p>
+				</f:then>
+				<f:else>
+					<f:translate key="text.emailnotfound" arguments="{0: '{email}'}"/>
+					<f:render section="cancel-form"/>
+				</f:else>
+			</f:if>			
+		</f:then>
+		
+		<f:else>
+			<f:render section="cancel-form"/>
+		</f:else>
+		
+	</f:if>		
+</f:section>
+
+<f:section name="cancel-form">
+	<f:form action="cancel" onsubmit="return mmcDmlSubscr.submitForm()" class="form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="mmcDms-email"><f:translate key="label.email"/>*</label>
+			<div class="col-sm-10">
+				<f:form.textfield name="email" type="text" class="form-control validate required email repeat" id="mmcDms-email"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="mmcDms-email-repeat"><f:translate key="label.email.repeat"/>*</label>
+			<div class="col-sm-10">
+				<f:form.textfield name="email-repeat" type="text" class="form-control validate required email" id="mmcDms-email-repeat"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+			<f:form.textfield class="h" name="h1"/>
+			<f:form.submit class="btn btn-default" name="submitButton" value="{f:translate(key: 'label.submit')}"/>
+			</div>
+		</div>
+	</f:form>	
+	<p>
+		<f:link.page>
+			<f:translate key="label.back"/>
+		</f:link.page>
+	</p>
+</f:section>

@@ -1,182 +1,111 @@
 /*------------- fe-editing styles ------------*/
-.tx-cal-controller {
-    .cal_required {
-        color: red;
-    }
-
-    .constrain {
-        color: red;
-        font-weight: bold;
-    }
-
-
-    input[type=image] {
-        width: 20px;
-        height: 20px;
-        border: none;
-        margin-left: 128px;
-        margin-top: 10px;
-    }
-    p {
-        margin-left: 0px;
-    }
-    #categoryEntries {
-        clear: left;
-    }
-
-    #categoryEntries input {
-        background-color: #FFFFFF;
-        border: 1px solid silver;
-        color: #EB691C;
-        font: 1em Arial, Helvetica, sans-serif;
-        width: 50px;
-        margin-bottom: 5px;
-    }
-    #tx_cal_controller_description__1-iframe.editorIframe {
-        width: 638px !important;
-        height: 365px !important;
-    }
-    div #ext-gen26 {
-        width: 205px !important;
-    }
-    img#ext-gen27 {
-        right: inherit!important;
-        margin-left: -175px!important;
-    }
-    #x-form-el-tx_cal_controller_description__1-FormatBlock.x-form-element {
-        padding-left: 0px!important;
-    }
-/*
-    #editorWrap1 textarea {
-        display: block
-    }
-
-    .editorWrap {
-        clear: left;
-    }
-    div #ext-gen26 {
-        width: 205px !important;
-    }
-    img#ext-gen27 {
-        right: inherit;
-    }
-*/
-    #confirm_event label,
-    #delete_event label {
-        font-weight: bold;
-    }
-    #confirm_event div,
-    #delete_event div {
-        margin: 5px 0px;
-        min-height: 1.2em;
-    }
-    /*Credits: By Santosh Setty (http://webdesigninfo.wordpress.com) */
-    /*Posted to: Dynamic Drive CSS Library (http://www.dynamicdrive.com/style/) */
-
-    .create-edit-event .tabcontent label {
-        display: inline-block;
-        vertical-align: top;
-        width: 6em;
-    }
-
-    .basictab ul {
-        padding: 3px 0;
-        margin: 4px 4px 4px 0;
-        font: bold 12px Verdana;
-        border-bottom: 1px solid gray;
-        list-style-type: none;
-        text-align: left; /*set to left, center, or right to align the menu as desired*/
-    }
-
-    .basictab li {
-        display: inline;
-        margin: 0;
-    }
-
-    .basictab li a {
-        text-decoration: none;
-        padding: 3px 7px;
-        margin-right: 3px;
-        border: 1px solid gray;
-        border-bottom: none;
-        background-color: #6699CC;
-        color: #FFFFFF;
-    }
-
-    .basictab li a:visited {
-        color: #2d2b2b;
-    }
-
-    .basictab li a:hover,
-    .basictab li a.current {
-        background-color: #557CA3;
-        color: #FFFFFF;
-    }
-
-    .basictab li a:active {
-        color: #000000;
-    }
-
-    .tabcontainer {
-        clear: left;
-        width: 95%; /*width of 2nd level sub menus*/
-        height: 1.5em; /*height of 2nd level sub menus. Set to largest's sub menu's height to avoid jittering.*/
-    }
-
-    .tabcontent {
-        display: none;
-    }
-
-    #tx_cal_controller_create_element input[type="text"]:not([size]) {
-        width: 6em; /* Desired width of input field */
-    }
-
-    #tx_cal_controller_create_element .treelevel0 {
-        display: block;
-        margin-left: 70px;
-    }
-
-    #tx_cal_controller_create_element p {
-        margin: 7px;
-    }
-
-    #tx_cal_controller_create_element .notify,
-    #tx_cal_controller_create_element .shared,
-    #tx_cal_controller_create_element .exception {
-        display: block;
-        margin-left: 140px;
-    }
-
-    #allday {
-        width: 10px;
-    }
-
-    #until label,
-    #by_day label,
-    #by_monthday label,
-    #by_month label {
-        margin-left: 50px;
-    }
-
-    #by_month label,
-    #by_monthday label {
-        width: 230px;
-    }
-
-    .reminderOffset {
-        width: 2em !important;
-    }
+.tx-cal-controller .cal_required {
+    color: red;
 }
+.tx-cal-controller .constrain {
+    color: red;
+    font-weight:bold;
+}
+#editorWrap1 textarea {
+    display: block
+}
+.tx-cal-controller .x-form-text.x-form-field.select {
+    left:0;
+    position:absolute;
+}
+.tx-cal-controller .htmlarea .toolbar .select {
+    height: 21px!important;
+}
+
+#tx_cal_controller_description__1-iframe.editorIframe {
+    width: 638px !important;
+    height: 365px !important;
+}
+div #ext-gen26 {
+    width: 205px !important;
+}
+/*
+img#ext-gen28 {
+    right: inherit!important;
+    margin-left: -30px!important;
+}*/
+#x-form-el-tx_cal_controller_description__1-FormatBlock.x-form-element {
+    padding-left: 0px!important;
+}
+/*Credits: By Santosh Setty (http://webdesigninfo.wordpress.com) */
+/*Posted to: Dynamic Drive CSS Library (http://www.dynamicdrive.com/style/) */
+
+.tx-cal-controller .create-edit-event .tabcontent label {
+    display: inline-block;
+    vertical-align:top;
+    width: 8em;
+}
+
+.tx-cal-controller .basictab ul {
+    margin: 4px;
+    padding: 3px 0;
+    margin-left: 0;
+    font: bold 12px Verdana;
+    border-bottom: 1px solid gray;
+    list-style-type: none;
+    text-align: left; /*set to left, center, or right to align the menu as desired*/
+}
+
+.tx-cal-controller .basictab li {
+    display: inline;
+    margin: 0;
+}
+
+.tx-cal-controller .basictab li a {
+    text-decoration: none;
+    padding: 3px 7px;
+    margin-right: 3px;
+    border: 1px solid gray;
+    border-bottom: none;
+    background-color: #6699CC;
+    color: #FFFFFF;
+}
+
+.tx-cal-controller .basictab li a:visited {
+    color: #2d2b2b;
+}
+
+.tx-cal-controller .basictab li a:hover,
+.tx-cal-controller .basictab li a.current {
+    background-color: #557CA3;
+    color: #FFFFFF;
+}
+
+.tx-cal-controller .basictab li a:active {
+    color: #000000;
+}
+
+.tx-cal-controller .tabcontainer {
+    clear: left;
+    width:95%; /*width of 2nd level sub menus*/
+    height:1.5em; /*height of 2nd level sub menus. Set to largest's sub menu's height to avoid jittering.*/
+}
+
+.tx-cal-controller .tabcontent {
+    display:none;
+}
+
 #tx_cal_controller_create_element input[type="text"]:not([size]) {
     width: 6em;    /* Desired width of input field */
 }
-
+#tx_cal_controller_create_element input#image_caption[type="text"]:not([size]),
+#tx_cal_controller_create_element input#image_title[type="text"]:not([size]),
+#tx_cal_controller_create_element input#attachment_caption[type="text"]:not([size]),
+#tx_cal_controller_create_element input#attachment_title[type="text"]:not([size]) {
+    width: 21em;    /* Desired width of input field */
+}
 #tx_cal_controller_create_element .treelevel0 {
     display:block;
-    /*margin-left: 132px;*/
     margin-left: 70px;
 }
-
+#tx_cal_controller_create_element label {
+    width: 8em;
+}
 #tx_cal_controller_create_element p {
     margin: 7px;
 }
@@ -202,4 +131,8 @@
 #by_month label,
 #by_monthday label {
     width: 230px;
+}
+
+.tx-cal-controller .reminderOffset {
+    width: 2em !important;
 }

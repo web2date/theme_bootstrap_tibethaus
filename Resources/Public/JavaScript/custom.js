@@ -122,6 +122,19 @@ jQuery(document).ready(function(){
    return false;
 });
 
+// Fancybox
+// ========
+jQuery(document).ready(function() {
+    jQuery('.fancybox').fancybox();
+});
+//
+
+// ResponsiveImages
+// ================
+jQuery(document).ready(function() {
+    $("img").responsiveimages();
+});
+
 // Popup home
 // ============
 function createCookie(name,value,days) {
@@ -148,17 +161,18 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name,"",-1);
 }
-window.onload = function() {
 
-    // DAS HIER IST DER FEHLER. ES GIBT KEINE SHADOWBOX MEHR
-    Shadowbox.init();
-    if (readCookie("hasVisitedBefore") == null){
-        Shadowbox.open({
-            player:     'iframe',
-            content:    'index.php?id=469',
-            height:     353,
-            width:      700
+jQuery(window).load(function() {
+    var $trigger = $('#popup');
+
+    if ($trigger.length && readCookie("hasVisitedBefore") == null) {
+        $.fancybox.open({
+            type: 'iframe',
+            href: 'index.php?id=469',
+            width: 800,
+            height: 630,
+            autoSize: false
         });
+        createCookie("hasVisitedBefore", "true");
     }
-    createCookie("hasVisitedBefore", "true");
-};
+});

@@ -1,5 +1,16 @@
 page {
 	includeCSS {
 		tibethaus = EXT:theme_bootstrap_tibethaus/Resources/Private/Dyncss/import.less
+		fancybox = EXT:theme_bootstrap_tibethaus/Resources/Public/Stylesheets/jquery.fancybox.css
 	}
 }
+
+
+	//[globalVar = LIT:1 = {$themes.mode.isProduction}]
+//		page {
+		//	includeCSS {
+	//			fontawesome = EXT:theme_bootstrap_tibethaus/Resources/Public/Fonts/FontAwesome/css/font-awesome.min.css
+		//	}
+//		}
+	//[global]
+

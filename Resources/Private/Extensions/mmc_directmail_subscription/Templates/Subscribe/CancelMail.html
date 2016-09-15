@@ -1,0 +1,9 @@
+<f:translate key="mail.content.salutation"/> {address.firstName} {address.lastName}<br/>
+<br/>
+<f:translate key="mail.cancel.content.text.1"/>
+<f:link.action action="cancelConfirm" arguments="{addressUid: address.uid, evc: address.emailVerificationCode}" additionalParams="{L:sysLangUid}" absolute="true">
+	<f:translate key="mail.cancel.content.text.linked"/>
+</f:link.action>
+<f:translate key="mail.cancel.content.text.2"/><br/>
+<br/>
+<f:translate key="mail.content.closingphrase"/>

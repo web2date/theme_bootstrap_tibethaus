@@ -1,0 +1,71 @@
+{namespace ce = Netzmacher\Slick\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="Main">
+
+  <ce:fal data="{data}" as="images">
+    <f:if condition="{0:data.section_frame} == {0:'62474'}">
+      <f:then>
+        <f:for each="{images}" as="image">
+          <div>
+            <figure>
+              <f:if condition="{image.link}">
+                <f:then>
+                  <f:link.page pageUid="{image.link}">
+                    <f:image src="{image.publicUrl}" id="I{image.uid}" class="lazy img-responsive" title="{image.title}" alt="{image.alternative}" height="{data.imageheight}" width="{data.imagewidth}"/>
+                  </f:link.page>
+                </f:then>
+                <f:else>
+                  <f:image src="{image.publicUrl}" id="I{image.uid}" class="lazy img-responsive" title="{image.title}" alt="{image.alternative}" height="{data.imageheight}" width="{data.imagewidth}"/>
+                </f:else>
+              </f:if>
+              <figcaption>{image.description}</figcaption>
+            </figure>
+          </div>
+        </f:for>
+      </f:then>
+      <f:else>
+        <f:for each="{images}" as="image">
+          <div>
+            <figure>
+              <f:if condition="{image.link}">
+                <f:then>
+                  <f:link.page pageUid="{image.link}">
+                    <f:image src="{image.publicUrl}" id="I{image.uid}" class="lazy img-responsive" title="{image.title}" alt="{image.alternative}" height="{data.imageheight}" width="{data.imagewidth}"/>
+                  </f:link.page>
+                </f:then>
+                <f:else>
+                  <f:image src="{image.publicUrl}" id="I{image.uid}" class="lazy img-responsive" title="{image.title}" alt="{image.alternative}" height="{data.imageheight}" width="{data.imagewidth}"/>
+                </f:else>
+              </f:if>
+              <f:comment>
+                <figcaption>{image.description}</figcaption>
+              </f:comment>
+            </figure>
+          </div>
+        </f:for>
+        <div class="border">
+          <div class="slick-header">
+            <div class="span">
+              <{settings.headerTag}>
+                <f:if condition="{data.header_link}">
+                  <f:then>
+                    <f:link.page pageUid="{data.header_link}">{data.header}</f:link.page>
+                  </f:then>
+                  <f:else>
+                    {data.header}
+                  </f:else>
+                </f:if>
+              </{settings.headerTag}>
+            </div>
+          </div>
+          <div class="slick-text">
+            <div class="span">
+              <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+          </div>
+        </div>
+      </f:else>
+    </f:if>
+  </ce:fal>
+
+</f:section>
